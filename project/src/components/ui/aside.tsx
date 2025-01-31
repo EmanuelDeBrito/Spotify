@@ -1,7 +1,8 @@
-import { faBarsStaggered, faHome, faPlus, faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faBarsStaggered, faGlobe, faHome, faPlus, faSearch } from "@fortawesome/free-solid-svg-icons"
 import { NavItem } from "../nav/nav-item"
 import { Box } from "./box"
 import { Logo } from "./logo"
+import { Button } from "./button"
 
 export const Aside = () => {
     return(
@@ -40,8 +41,31 @@ export const Aside = () => {
                     <Box active>
                         <p className="text-[16px] text-white font-semibold">Crie sua primeira Playlist</p>
 
-                        <p className="mt-5 text-[14px] text-[#EBEBEB]">É fácil vamos te ajudar.</p>
+                        <p className="my-5 text-[14px] text-[#B3B3B3]">É fácil vamos te ajudar.</p>
+
+                        <div className="w-[130px]">
+                            <Button 
+                                label="Criar Playlist"
+                            />
+                        </div>
+
                     </Box>
+                </div>
+
+                <span 
+                    className="
+                        inline-block mt-6 mb-5 text-[13px] text-[#B3B3B3] transition-all cursor-pointer hover:underline
+                    "
+                >
+                    Cookies
+                </span>
+
+                <div className="w-[130px]">
+                    <Button 
+                        label="Português"
+                        Icon={faGlobe}
+                        border
+                    />
                 </div>
             </Box>
         </aside>
