@@ -6,7 +6,7 @@ import { Button } from "./button"
 
 export const Aside = () => {
     return(
-        <aside className="fixed top-0 left-0 w-[370px] p-2">
+        <aside className="sticky top-0 left-0 w-[370px] px-2">
             <Box>
                 <Logo 
                     width={100}

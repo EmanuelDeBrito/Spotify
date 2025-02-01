@@ -7,14 +7,16 @@ type Props = {
     label: string,
     Icon?: IconDefinition,
     border?: boolean,
+    big?: boolean,
     onClick?: () => void
 }
 
-export const Button = ({ label, Icon, border, onClick }: Props) => {
+export const Button = ({ label, Icon, border, big, onClick }: Props) => {
     return(
         <div 
         className={`
-            flex justify-center items-center gap-2 px-3 py-2 text-[15px] font-semibold rounded-[20px] transition-all cursor-pointer 
+            flex justify-center items-center gap-2 text-[15px] font-semibold rounded-full transition-all cursor-pointer
+            ${big ? 'px-6 py-4' : 'px-3 py-2'}
             ${border ? 'bg-transparent text-white border border-[#525252] hover:border-white' : 'bg-white text-black'}
             hover:opacity-90 hover:scale-105
         `}
