@@ -4,6 +4,8 @@ import { CircleIcon } from "./circle-icon"
 import { MainInput } from "../main/main-input"
 import { Button } from "./button"
 import Link from "next/link"
+import { Title } from "./title"
+import { Subtitle } from "./subtitle"
 
 export const Main = () => {
     return(
@@ -34,6 +36,17 @@ export const Main = () => {
                             big
                         />
                     </div>
+                </div>
+            </Box>
+            <Box>
+                <Title 
+                    label="Bom dia"
+                />
+
+                <div className="mt-10">
+                    <Subtitle 
+                        label="Navegar por todas as seções"
+                    />
                 </div>
             </Box>
         </main>
