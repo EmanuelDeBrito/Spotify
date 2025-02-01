@@ -5,7 +5,7 @@ export const categoriesData: Categories[] = [
         image: '/playlist/1.jpeg'
     },
     {
-        image: '/playlist/2.jpeg'
+        image: '/playlist/2.png'
     },
     {
         image: '/playlist/3.jpeg'

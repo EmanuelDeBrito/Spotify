@@ -6,6 +6,8 @@ import { Button } from "./button"
 import Link from "next/link"
 import { Title } from "./title"
 import { Subtitle } from "./subtitle"
+import { categoriesData } from "@/data/categoriesData"
+import { Card } from "./card"
 
 export const Main = () => {
     return(
@@ -39,14 +41,25 @@ export const Main = () => {
                 </div>
             </Box>
             <Box>
-                <Title 
-                    label="Bom dia"
-                />
-
-                <div className="mt-10">
-                    <Subtitle 
-                        label="Navegar por todas as seções"
+                <div className="h-[53vh] overflow-y-scroll">
+                    <Title 
+                        label="Bom dia"
                     />
+
+                    <div className="mt-10">
+                        <Subtitle 
+                            label="Navegar por todas as seções"
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-4 gap-6 mt-3">
+                        {categoriesData.map((item, key) => (
+                            <Card 
+                                image={item.image}
+                                key={key}
+                            />
+                        ))}
+                    </div>
                 </div>
             </Box>
         </main>
